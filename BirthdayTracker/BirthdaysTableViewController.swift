@@ -69,25 +69,34 @@ class BirthdaysTableViewController: UITableViewController {
         
     }
 
-    /*
-    // Override to support conditional editing of the table view.
+    
+    // метод для возможности редактирования таблицы дней рождений (сдвигание, удаление и тд)
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+    
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        if birthdays.count > indexPath.row { // проверяем что массив birthdays имеет минимум столько же объектов что и кол-во строк чтобы небыло "out of range"
+            let birthday = birthdays[indexPath.row] // значение которое хотим удалить
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate // получаем доступ к контексту к базе данных для делегата???
+            let context = appDelegate.persistentContainer.viewContext
+            context.delete(birthday) // удаляем объект из базы данных
+            birthdays.remove(at: indexPath.row) // удаляем обхект и из таблицы
+            
+            do {
+                try context.save() // сохранение изменений
+            } catch let error {
+                print("Failed to save due an \(error)")
+            }
+            tableView.deleteRows(at: [indexPath], with: .fade) // fade - вид анимации
+        }
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
