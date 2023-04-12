@@ -7,12 +7,22 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let center = UNUserNotificationCenter.current() // текущее значение UNUserNotificationCenter в константе "center"
+        center.requestAuthorization(options: [.alert, .sound], completionHandler: {(granted, error) in // запрос разрешений на отправку уведомдений
+            if granted {
+                print("Permission to send notifications is received")
+            } else {
+                print("Permission to send notifications is declined")
+            }
+        })
+        
         return true
     }
 

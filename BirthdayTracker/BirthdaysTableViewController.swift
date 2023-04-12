@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 class BirthdaysTableViewController: UITableViewController {
     
@@ -82,6 +83,11 @@ class BirthdaysTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if birthdays.count > indexPath.row { // проверяем что массив birthdays имеет минимум столько же объектов что и кол-во строк чтобы небыло "out of range"
             let birthday = birthdays[indexPath.row] // значение которое хотим удалить
+            
+            if let identifier = birthday.birthdayId {
+                let center = UNUserNotificationCenter.current()
+                center.removePendingNotificationRequests(withIdentifiers: [identifier])
+            }
             
             let appDelegate = UIApplication.shared.delegate as! AppDelegate // получаем доступ к контексту к базе данных для делегата???
             let context = appDelegate.persistentContainer.viewContext
