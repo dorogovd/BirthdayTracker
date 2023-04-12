@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		63C585DB29DDDC76006B5B48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C585DA29DDDC76006B5B48 /* AppDelegate.swift */; };
 		63C585DD29DDDC76006B5B48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C585DC29DDDC76006B5B48 /* SceneDelegate.swift */; };
-		63C585DF29DDDC76006B5B48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C585DE29DDDC76006B5B48 /* ViewController.swift */; };
+		63C585DF29DDDC76006B5B48 /* AddBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C585DE29DDDC76006B5B48 /* AddBirthdayViewController.swift */; };
 		63C585E229DDDC76006B5B48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C585E029DDDC76006B5B48 /* Main.storyboard */; };
 		63C585E529DDDC76006B5B48 /* BirthdayTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63C585E329DDDC76006B5B48 /* BirthdayTracker.xcdatamodeld */; };
 		63C585E729DDDC77006B5B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63C585E629DDDC77006B5B48 /* Assets.xcassets */; };
 		63C585EA29DDDC77006B5B48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C585E829DDDC77006B5B48 /* LaunchScreen.storyboard */; };
+		63C585F429DDF01A006B5B48 /* BirthdaysTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C585F329DDF01A006B5B48 /* BirthdaysTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		63C585D729DDDC76006B5B48 /* BirthdayTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdayTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C585DA29DDDC76006B5B48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63C585DC29DDDC76006B5B48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		63C585DE29DDDC76006B5B48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		63C585DE29DDDC76006B5B48 /* AddBirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBirthdayViewController.swift; sourceTree = "<group>"; };
 		63C585E129DDDC76006B5B48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63C585E429DDDC76006B5B48 /* BirthdayTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BirthdayTracker.xcdatamodel; sourceTree = "<group>"; };
 		63C585E629DDDC77006B5B48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63C585E929DDDC77006B5B48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63C585EB29DDDC77006B5B48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63C585F329DDF01A006B5B48 /* BirthdaysTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,8 @@
 			children = (
 				63C585DA29DDDC76006B5B48 /* AppDelegate.swift */,
 				63C585DC29DDDC76006B5B48 /* SceneDelegate.swift */,
-				63C585DE29DDDC76006B5B48 /* ViewController.swift */,
+				63C585DE29DDDC76006B5B48 /* AddBirthdayViewController.swift */,
+				63C585F329DDF01A006B5B48 /* BirthdaysTableViewController.swift */,
 				63C585E029DDDC76006B5B48 /* Main.storyboard */,
 				63C585E629DDDC77006B5B48 /* Assets.xcassets */,
 				63C585E829DDDC77006B5B48 /* LaunchScreen.storyboard */,
@@ -141,7 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63C585DF29DDDC76006B5B48 /* ViewController.swift in Sources */,
+				63C585F429DDF01A006B5B48 /* BirthdaysTableViewController.swift in Sources */,
+				63C585DF29DDDC76006B5B48 /* AddBirthdayViewController.swift in Sources */,
 				63C585DB29DDDC76006B5B48 /* AppDelegate.swift in Sources */,
 				63C585DD29DDDC76006B5B48 /* SceneDelegate.swift in Sources */,
 				63C585E529DDDC76006B5B48 /* BirthdayTracker.xcdatamodeld in Sources */,
@@ -294,11 +298,12 @@
 				DEVELOPMENT_TEAM = X8NTYMGXRX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BirthdayTracker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Birthdays;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,11 +327,12 @@
 				DEVELOPMENT_TEAM = X8NTYMGXRX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BirthdayTracker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Birthdays;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
